@@ -1,0 +1,150 @@
+.topbar {
+    border-bottom: 2px solid #08307548;
+    background: linear-gradient(90deg, #98cbfa1b, #e9f3fc);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+  
+  .headerWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; 
+    gap: 15px; 
+  }
+  
+  .logo img {
+    max-height: 80px; 
+  }
+  
+  .menu a {
+    margin: 0 20px;
+    text-decoration: none;
+    font-family: 'calistoga', sans-serif; 
+    color: #1b3c74;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    background: #3751d4;
+    transition: width 0.3s ease;
+    width: 0; 
+  }
+  
+  .menu a:hover {
+    color: #00129e;
+  }
+  
+  .menu a:hover::after {
+    width: 100%;
+  }
+  
+  .search {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #ccd5e0;
+    border-radius: 25px;
+    padding: 6px 14px;
+    width: 220px;
+    box-shadow: 0 2px 5px rgba(0, 18, 158, 0.08); 
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .search:hover {
+    box-shadow: 0 4px 10px rgba(0, 18, 158, 0.15); 
+  }
+  
+  .inputField {
+    border: none;
+    outline: none;
+    background: transparent;
+    flex: 1;
+    font-size: 14px;
+  }
+  
+
+  .icone {
+    background-size: cover; 
+    display: inline-block;
+    width: 20px; 
+    height: 20px;
+  }
+  
+  .userIcons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .iconeLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .iconeLink img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+  }
+  
+  .iconeLink:hover {
+    transform: scale(1.1);
+  }
+  
+
+  
+  @media (max-width: 1199px) {
+    .container {
+      padding: 0 30px;
+    }
+    .menu a {
+      margin: 0 10px;
+      font-size: 13px;
+    }
+    .search {
+      width: 180px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .container {
+      padding: 0 15px;
+    }
+    .headerWrap {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo img {
+      max-height: 40px;
+    }
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .menu a {
+      font-size: 12px;
+      margin: 5px;
+    }
+    .search {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
