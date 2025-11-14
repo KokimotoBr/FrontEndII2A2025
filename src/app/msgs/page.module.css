@@ -1,0 +1,22 @@
+.tbl {
+    border-collapse: collapse;
+    margin: auto;
+    font-size: 2em;
+}
+
+
+.tbl td, .tbl th {
+    border: 2px solid black;
+    padding: 2px;
+}
+
+.tbl tbody tr {
+    cursor: pointer;
+}
+.tbl tbody tr:nth-child(odd){
+    background-color: aqua;
+}
+
+.tbl tbody tr:hover {
+    background-color: rgba(157, 255, 0, 0.336);
+}
