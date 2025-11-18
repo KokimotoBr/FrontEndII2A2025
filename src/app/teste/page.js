@@ -1,15 +1,13 @@
-// pages/sobre-nos.jsx
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from './page.module.css'; 
+import styles from './page.module.css';
 
-
-export default function  Sobrenos() {
+export default function Sobrenos() {
   return (
     <>
       <head>
         <title>Sobre Nós - Sabor&Cultura</title>
-        <meta charset="UTF-8" />
+        <meta charSet ="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
 
@@ -30,32 +28,34 @@ export default function  Sobrenos() {
             <p>De um singelo doce do interior a um instigante prato de terras distantes, cada sabor encontra seu lar em nossa plataforma. E, em cada receita compartilhada, reside a oportunidade de eternizar tradições e espalhar a paixão pela culinária, conectando corações através do paladar.</p>
           </div>
 
-          <div className={styles.recomendacoesSection}>
+          {/* Adicionada a div wrapper extra para a estilização da coluna */}
+          <div className={styles.recomendacoesSectionWrapper}> 
             <h3>Nossas recomendações de receitas</h3>
             <div className={styles.gridReceitas}>
               <div className={styles.cardReceita}>
+                {/* Ajustei width/height para serem mais próximos da proporção da imagem na foto */}
                 <Link href="/carnes">
-                  <Image src="/images/pernil-suíno-molho-damasco.jpg" alt="Carne" width={120} height={80} layout="responsive" />
+                  <Image src="/images/pernil-suíno-molho-damasco.jpg" alt="Carne" width={300} height={200} layout="responsive" />
                 </Link>
               </div>
               <div className={styles.cardReceita}>
                 <Link href="/jantar">
-                  <Image src="/images/frango-frito-730x480.jpeg" alt="Frango Frito" width={120} height={80} layout="responsive" />
+                  <Image src="/images/frango-frito-730x480.jpeg" alt="Frango Frito" width={300} height={200} layout="responsive" />
                 </Link>
               </div>
               <div className={styles.cardReceita}>
                 <Link href="/jantar">
-                  <Image src="/images/polvo-ao-alho-e-oleo-00-730x480.jpg" alt="Polvo" width={120} height={80} layout="responsive" />
+                  <Image src="/images/polvo-ao-alho-e-oleo-00-730x480.jpg" alt="Polvo" width={300} height={200} layout="responsive" />
                 </Link>
               </div>
               <div className={styles.cardReceita}>
                 <Link href="/bebidas">
-                  <Image src="/images/images.jpg" alt="Bebidas variadas" width={120} height={80} layout="responsive" />
+                  <Image src="/images/images.jpg" alt="Bebidas variadas" width={300} height={200} layout="responsive" />
                 </Link>
               </div>
               <div className={styles.cardReceita}>
                 <Link href="/fitness">
-                  <Image src="/images/jantar-fitness.jpg" alt="Jantar fitness" width={120} height={80} layout="responsive" />
+                  <Image src="/images/jantar-fitness.jpg" alt="Jantar fitness" width={300} height={200} layout="responsive" />
                 </Link>
               </div>
             </div>

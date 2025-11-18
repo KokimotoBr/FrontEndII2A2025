@@ -1,215 +1,129 @@
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 60px;
-  }
-  
-  .topbar {
-    border-bottom: 2px solid #08307548;
-    background: linear-gradient(90deg, #98cbfa1b, #e9f3fc);
-  }
-  
-  .header-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-  
-  .logo img {
-    max-height: 80px;
-  }
-  
-  .menu a {
-    margin: 0 20px;
-    text-decoration: none;
-    font-family: calistoga;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px; /* Garante padding lateral como na imagem */
+}
+
+/* --- Estilos do Cabeçalho da Seção --- */
+.sobreNosHeader {
+  text-align: center;
+}
+
+.tituloBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0 10px; /* Espaçamento superior e inferior do título */
+  gap: 15px;
+}
+
+.tituloBox h2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1b3c74; /* Cor do título */
+  white-space: nowrap;
+}
+
+.tituloBox .linha {
+  flex: 1; /* Faz a linha ocupar o espaço restante */
+  height: 1px;
+  background: #cfd8ea; /* Cor da linha */
+}
+
+.subtitulo {
+  text-align: center;
+  color: #777;
+  font-size: 13px;
+  margin-bottom: 40px; /* Espaçamento abaixo do subtítulo */
+}
+
+
+/* --- Seção de Conteúdo Principal (Texto e Imagens) --- */
+.contentWrapper {
+  display: flex;
+  flex-direction: row; /* Texto na esquerda, Imagens na direita (padrão) */
+  gap: 40px; /* Espaçamento entre as duas colunas */
+  margin-bottom: 40px; /* Espaço antes da seção de desenvolvedores */
+}
+
+.sobreNosText {
+  flex: 2; /* Ocupa 2/3 do espaço disponível */
+  text-align: justify;
+}
+
+.sobreNosText p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Envolve as recomendações para dar um padding esquerdo e um limite */
+.recomendacoesSectionWrapper {
+    flex: 1; /* Ocupa 1/3 do espaço disponível */
+    border-left: 1px solid #cfd8ea; /* Linha divisória vertical clara */
+    padding-left: 40px; /* Espaçamento após a linha divisória */
+}
+
+.recomendacoesSectionWrapper h3 {
+  font-size: 16px;
+  color: #1b3c74;
+  margin-bottom: 20px;
+}
+
+/* --- Estilos das Imagens de Receita --- */
+.gridReceitas {
+  display: flex;
+  flex-direction: column; /* Coloca as imagens em uma única coluna vertical */
+  gap: 15px; /* Espaçamento vertical entre as imagens */
+}
+
+.cardReceita {
+  /* Remove width/height fixos para que layout="responsive" funcione dentro do flex container */
+  width: 100%; 
+  /* Adiciona estilos visuais */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* --- Estilos das Seções Inferiores --- */
+.desenvolvedoresSection {
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+.desenvolvedoresSection h4 {
     color: #1b3c74;
-    font-size: 14px;
-    font-weight: 600;
-    position: relative;
-    transition: color 0.3s ease;
-  }
-  
-  .menu a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    height: 2px;
-    background: #3751d4;
-    transition: width 0.3s ease;
-  }
-  
-  .menu a:hover {
-    color: #00129e;
-  }
-  
-  .menu a:hover::after {
-    width: 100%;
-  }
-  
-  .search {
-    display: flex;
-    align-items: center;
-    background: #fff;
-    border: 1px solid #ccd5e0;
-    border-radius: 25px;
-    padding: 6px 14px;
-    width: 220px;
-    box-shadow: 0 2px 5px rgba(0, 18, 158, 0.08);
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .search:hover {
-    box-shadow: 0 4px 10px rgba(0, 18, 158, 0.15);
-  }
-  
-  .search input {
-    border: none;
-    outline: none;
-    background: transparent;
-    flex: 1;
-    font-size: 14px;
-  }
-  
-  .user-icons {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .icone-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: none;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .icone-link img {
-    width: 35px;
-    height: 35px;
-    object-fit: contain;
-  }
-  
-  .icone-link:hover {
-    transform: scale(1.1);
-  }
-  
-  .categorias {
-    padding: 5px;
-    border-top: 1px solid #8ba3d3;
-    border-bottom: 2px solid #8ba3d3;
-    background: linear-gradient(90deg, rgba(176, 217, 255, 0.138), rgba(233, 243, 252, 0.5));
-    margin-top: 30px;
-  }
-  
-  .categorias-wrap {
-    display: flex;
-    justify-content: center;
-    gap: 70px;
-    padding: 25px 0;
-  }
-  
-  .categorias a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: #1b3c74;
-    font-weight: bold;
-    font-size: 14px;
-    transition: transform 0.2s ease, color 0.3s ease;
-  }
-  
-  .categorias a:hover {
-    transform: translateY(-5px);
-    color: #00129e;
-  }
-  
-  .categorias .icone {
-    margin-bottom: 8px;
-    width: 90px;
-    height: 90px;
-    object-fit: contain;
-    border-radius: 12px;
-    display: block;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .categorias .icone:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 14px rgba(0, 18, 158, 0.15);
-  }
-  
-  .titulo-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 50px 0 10px;
-    gap: 15px;
-  }
-  
-  .titulo_box h2 {
-    font-size: 18px;
-    font-weight: bold;
-    color: #1b3c74;
-    white-space: nowrap;
-  }
-  
-.linha {
-    flex: 1;
-    height: 1px;
-    background: #cfd8ea;
-  }
-  
-  .subtitulo {
+    margin-bottom: 10px;
+}
+
+.sociais {
+    margin-top: 40px;
     text-align: center;
-    color: #777;
-    font-size: 13px;
-    margin-bottom: 40px;
-  }
-  
-  .grid-categorias {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 35px;
+}
+
+.sociais h2 {
+    color: #1b3c74;
+    margin-bottom: 20px;
+}
+
+.icones {
+    display: flex;
     justify-content: center;
-    margin-bottom: 80px;
-  }
-  
-  .card {
-    background: transparent;
-    border: none;
-    text-align: center;
-    transition: transform 0.2s ease-in-out;
+    gap: 20px;
+}
+
+/* Adicione media queries se quiser que o layout se adapte a celulares */
+@media (max-width: 768px) {
+  .contentWrapper {
+    flex-direction: column; /* Em telas menores, empilha texto em cima, imagens embaixo */
   }
 
-  .card:hover {
-    transform: translateY(-5px);
+  .recomendacoesSectionWrapper {
+    border-left: none; /* Remove a linha vertical em mobile */
+    padding-left: 0;
+    margin-top: 20px;
   }
-  
-  .card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 12px;
-    border: 1px solid #cfd8ea;
-    box-shadow: 0 4px 8px rgba(0, 18, 158, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  .container {
+      padding: 0 20px;
   }
-  
-  .card img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 14px rgba(0, 18, 158, 0.2);
-  }
-  
-  .card p {
-    margin-top: 10px;
-    font-size: 14px;
-    font-family: sans-serif;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-  }
+}
