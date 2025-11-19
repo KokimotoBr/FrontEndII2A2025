@@ -4,7 +4,6 @@
   padding: 0 60px;
 }
 
-/* --- Estilos do Cabeçalho da Seção --- */
 .sobreNosHeader {
   text-align: center;
 }
@@ -14,7 +13,6 @@
   align-items: center;
   justify-content: center;
   margin: 50px 0 10px;
-  /* Espaçamento superior e inferior do título */
   gap: 15px;
 }
 
@@ -27,7 +25,6 @@
 
 .tituloBox .linha {
   flex: 1;
-  /* Faz a linha ocupar o espaço restante */
   height: 1px;
   background: #cfd8ea;
 }
@@ -37,24 +34,19 @@
   color: #777;
   font-size: 13px;
   margin-bottom: 40px;
-  /* Espaçamento abaixo do subtítulo */
 }
 
 
-/* --- Seção de Conteúdo Principal (Texto e Imagens) --- */
+/* Texto e Imagens*/
 .contentWrapper {
   display: flex;
   flex-direction: row;
-  /* Texto na esquerda, Imagens na direita (padrão) */
   gap: 40px;
-  /* Espaçamento entre as duas colunas */
   margin-bottom: 40px;
-  /* Espaço antes da seção de desenvolvedores */
 }
 
 .sobreNosText {
   flex: 2;
-  /* Ocupa 2/3 do espaço disponível */
   text-align: justify;
 }
 
@@ -63,12 +55,11 @@
   margin-bottom: 15px;
 }
 
-/* Container do texto */
-
+/*Recomendações */
 .recomendacoesSectionWrapper {
-  flex: 1;
-  border-left: 1px solid #cfd8ea;
-  padding-left: 40px;
+  flex: 1; 
+  border-left: 1px solid #cfd8ea; 
+  padding-left: 40px; 
 }
 
 .recomendacoesSectionWrapper h3 {
@@ -78,23 +69,38 @@
 }
 
 .gridReceitas {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-bottom: 75px;
   gap: 15px;
 }
 
 .cardReceita {
-
-  width: 90%;
+  /* altura e a largura do container pai */
+  width: 90%; 
+  height: 120px; 
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  /* ESSENCIAL: Permite que a imagem filha com fill se posicione relativamente a este bloco */
+  position: relative; 
 }
 
-/* Container da parte desenvolvedores*/
+
+.cardReceita img {
+  object-fit: cover; 
+  transition: transform 0.2s; 
+}
+
+.cardReceita img:hover {
+  transform: scale(1.05);
+}
+
+/*Desenvolvedores */
 .desenvolvedoresSection {
   margin-top: 40px;
   padding-top: 1px;
+  padding-bottom: 45px;
 }
 
 .desenvolvedoresSection h4 {
@@ -102,46 +108,23 @@
   margin-bottom: 10px;
 }
 
-.sociais {
-  margin-top: 40px;
-  text-align: center;
+.desenvolvedoresSection ul li {
+  list-style: none;
+  margin-bottom: 5px;
 }
 
-.sociais h2 {
+.sociais {
+  margin-top: 40px;
+}
+
+.sociaish2 {
   color: #1b3c74;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
+  text-align: left;
 }
 
 .icones {
   display: flex;
-  justify-content: left;
+  justify-content: flex-start;
   gap: 20px;
-}
-
-.iconesTitulo {
-  justify-content: left;
-  display: flex;
-}
-
-.li{
-  list-style: none;
-}
-
-/* Adicione media queries se quiser que o layout se adapte a celulares */
-@media (max-width: 768px) {
-  .contentWrapper {
-    flex-direction: column;
-    /* Em telas menores, empilha texto em cima, imagens embaixo */
-  }
-
-  .recomendacoesSectionWrapper {
-    border-left: none;
-    /* Remove a linha vertical em mobile */
-    padding-left: 0;
-    margin-top: 20px;
-  }
-
-  .container {
-    padding: 0 20px;
-  }
 }
