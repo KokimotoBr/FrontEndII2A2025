@@ -1,7 +1,7 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 60px; /* Garante padding lateral como na imagem */
+  padding: 0 60px;
 }
 
 /* --- Estilos do Cabeçalho da Seção --- */
@@ -13,41 +13,48 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 50px 0 10px; /* Espaçamento superior e inferior do título */
+  margin: 50px 0 10px;
+  /* Espaçamento superior e inferior do título */
   gap: 15px;
 }
 
 .tituloBox h2 {
   font-size: 18px;
   font-weight: bold;
-  color: #1b3c74; /* Cor do título */
+  color: #1b3c74;
   white-space: nowrap;
 }
 
 .tituloBox .linha {
-  flex: 1; /* Faz a linha ocupar o espaço restante */
+  flex: 1;
+  /* Faz a linha ocupar o espaço restante */
   height: 1px;
-  background: #cfd8ea; /* Cor da linha */
+  background: #cfd8ea;
 }
 
 .subtitulo {
   text-align: center;
   color: #777;
   font-size: 13px;
-  margin-bottom: 40px; /* Espaçamento abaixo do subtítulo */
+  margin-bottom: 40px;
+  /* Espaçamento abaixo do subtítulo */
 }
 
 
 /* --- Seção de Conteúdo Principal (Texto e Imagens) --- */
 .contentWrapper {
   display: flex;
-  flex-direction: row; /* Texto na esquerda, Imagens na direita (padrão) */
-  gap: 40px; /* Espaçamento entre as duas colunas */
-  margin-bottom: 40px; /* Espaço antes da seção de desenvolvedores */
+  flex-direction: row;
+  /* Texto na esquerda, Imagens na direita (padrão) */
+  gap: 40px;
+  /* Espaçamento entre as duas colunas */
+  margin-bottom: 40px;
+  /* Espaço antes da seção de desenvolvedores */
 }
 
 .sobreNosText {
-  flex: 2; /* Ocupa 2/3 do espaço disponível */
+  flex: 2;
+  /* Ocupa 2/3 do espaço disponível */
   text-align: justify;
 }
 
@@ -56,11 +63,12 @@
   margin-bottom: 15px;
 }
 
-/* Envolve as recomendações para dar um padding esquerdo e um limite */
+/* Container do texto */
+
 .recomendacoesSectionWrapper {
-    flex: 1; /* Ocupa 1/3 do espaço disponível */
-    border-left: 1px solid #cfd8ea; /* Linha divisória vertical clara */
-    padding-left: 40px; /* Espaçamento após a linha divisória */
+  flex: 1;
+  border-left: 1px solid #cfd8ea;
+  padding-left: 40px;
 }
 
 .recomendacoesSectionWrapper h3 {
@@ -69,61 +77,71 @@
   margin-bottom: 20px;
 }
 
-/* --- Estilos das Imagens de Receita --- */
 .gridReceitas {
   display: flex;
-  flex-direction: column; /* Coloca as imagens em uma única coluna vertical */
-  gap: 15px; /* Espaçamento vertical entre as imagens */
+  flex-direction: column;
+  gap: 15px;
 }
 
 .cardReceita {
-  /* Remove width/height fixos para que layout="responsive" funcione dentro do flex container */
-  width: 100%; 
-  /* Adiciona estilos visuais */
+
+  width: 90%;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
-/* --- Estilos das Seções Inferiores --- */
+/* Container da parte desenvolvedores*/
 .desenvolvedoresSection {
-    margin-top: 40px;
-    padding-top: 20px;
+  margin-top: 40px;
+  padding-top: 1px;
 }
 
 .desenvolvedoresSection h4 {
-    color: #1b3c74;
-    margin-bottom: 10px;
+  color: #1b3c74;
+  margin-bottom: 10px;
 }
 
 .sociais {
-    margin-top: 40px;
-    text-align: center;
+  margin-top: 40px;
+  text-align: center;
 }
 
 .sociais h2 {
-    color: #1b3c74;
-    margin-bottom: 20px;
+  color: #1b3c74;
+  margin-bottom: 20px;
 }
 
 .icones {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+}
+
+.iconesTitulo {
+  justify-content: left;
+  display: flex;
+}
+
+.li{
+  list-style: none;
 }
 
 /* Adicione media queries se quiser que o layout se adapte a celulares */
 @media (max-width: 768px) {
   .contentWrapper {
-    flex-direction: column; /* Em telas menores, empilha texto em cima, imagens embaixo */
+    flex-direction: column;
+    /* Em telas menores, empilha texto em cima, imagens embaixo */
   }
 
   .recomendacoesSectionWrapper {
-    border-left: none; /* Remove a linha vertical em mobile */
+    border-left: none;
+    /* Remove a linha vertical em mobile */
     padding-left: 0;
     margin-top: 20px;
   }
+
   .container {
-      padding: 0 20px;
+    padding: 0 20px;
   }
 }

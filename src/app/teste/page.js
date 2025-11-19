@@ -28,12 +28,11 @@ export default function Sobrenos() {
             <p>De um singelo doce do interior a um instigante prato de terras distantes, cada sabor encontra seu lar em nossa plataforma. E, em cada receita compartilhada, reside a oportunidade de eternizar tradições e espalhar a paixão pela culinária, conectando corações através do paladar.</p>
           </div>
 
-          {/* Adicionada a div wrapper extra para a estilização da coluna */}
+
           <div className={styles.recomendacoesSectionWrapper}> 
             <h3>Nossas recomendações de receitas</h3>
             <div className={styles.gridReceitas}>
               <div className={styles.cardReceita}>
-                {/* Ajustei width/height para serem mais próximos da proporção da imagem na foto */}
                 <Link href="/carnes">
                   <Image src="/images/pernil-suíno-molho-damasco.jpg" alt="Carne" width={300} height={200} layout="responsive" />
                 </Link>
@@ -65,17 +64,17 @@ export default function Sobrenos() {
         <section className={styles.desenvolvedoresSection}>
           <h4>DESENVOLVEDORES</h4>
           <ul>
-            <li>Ana Clara Bertando</li>
-            <li>Anthony Pohlmann Rodrigues</li>
-            <li>Ingrid Victória de Souza Silva</li>
-            <li>Kamyly Lopes Gouveia</li>
-            <li>Ludmele Figueredo da Silva</li>
-            <li>Pamela Alves</li>
+            <li className={styles.li}>Ana Clara Bertando</li>
+            <li className={styles.li}>Anthony Pohlmann Rodrigues</li>
+            <li className={styles.li}>Ingrid Victória de Souza Silva</li>
+            <li className={styles.li}>Kamyly Lopes Gouveia</li>
+            <li className={styles.li}>Ludmele Figueredo da Silva</li>
+            <li className={styles.li}>Pamela Alves</li>
           </ul>
         </section>
 
         <section className={styles.sociais}>
-          <h2>CONECTE-SE CONOSCO</h2>
+          <h2 className={styles.iconesTitulo}>CONECTE-SE CONOSCO</h2>
           <div className={styles.icones}>
             <a href="#">
               <Image src="/images/instagram.png" alt="Instagram" width={40} height={40} />
