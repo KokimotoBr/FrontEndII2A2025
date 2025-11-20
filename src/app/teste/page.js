@@ -40,16 +40,16 @@ export default function Sobrenos() {
             <section className={styles.sociais}>
               <h2 className={styles.sociaish2}>CONECTE-SE CONOSCO</h2>
               <div className={styles.icones}>
-                <a href="#">
+                <a href="https://instagram.com">
                   <Image src="/images/instagram.png" alt="Instagram" width={40} height={40} />
                 </a>
-                <a href="#">
+                <a href="https://facebook.com">
                   <Image src="/images/facebook.png" alt="Facebook" width={40} height={40} />
                 </a>
-                <a href="#">
+                <a href="https://twitter.com">
                   <Image src="/images/twitter.png" alt="Twitter" width={40} height={40} />
                 </a>
-                <a href="#">
+                <a href="https://whatsapp.com">
                   <Image src="/images/whatsapp.png" alt="WhatsApp" width={40} height={40} />
                 </a>
               </div>
