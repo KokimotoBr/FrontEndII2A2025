@@ -1,3 +1,4 @@
+"use client";
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './page.module.css';
@@ -5,14 +6,7 @@ import styles from './page.module.css';
 export default function Sobrenos() {
   return (
     <>
-      <head>
-        <title>Sobre Nós - Sabor&Cultura</title>
-        <meta charSet ="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </head>
-
       <main className={styles.container}>
-
         <section className={styles.sobreNosHeader}>
           <div className={styles.tituloBox}>
             <div className={styles.linha}></div>
@@ -22,14 +16,14 @@ export default function Sobrenos() {
           <p className={styles.subtitulo}>MOTIVAÇÕES E EXPECTATIVAS</p>
         </section>
 
-        {/* Conteúdo Principal*/}
+        {/* texto*/}
         <section className={styles.contentWrapper}>
           <div className={styles.sobreNosText}>
             <p>Bem-vindos ao Sabor&Cultura, um refúgio digital onde a elegância e a simplicidade se unem para celebrar a culinária como uma sublime ponte entre culturas, gerações e memórias. Sonhamos com um portal que seja o guardião de um universo de receitas, desde os segredos da cozinha tradicional até o calor das preciosas heranças familiares.</p>
             <p>Nossa missão é criar uma comunidade global, convidando entusiastas da gastronomia de todos os cantos do mundo a compartilhar seus tesouros culinários, construindo um repertório vibrante e repleto de afeto. Pois acreditamos que cozinhar é mais do que nutrir o corpo é alimentar a alma, preservar legados e honrar a tapeçaria cultural da humanidade.</p>
             <p>De um singelo doce do interior a um instigante prato de terras distantes, cada sabor encontra seu lar em nossa plataforma. E, em cada receita compartilhada, reside a oportunidade de eternizar tradições e espalhar a paixão pela culinária, conectando corações através do paladar.</p>
             
-            {/* DESENVOLVEDORES*/}
+            {/* desenvolvedores*/}
             <section className={styles.desenvolvedoresSection}>
               <h4>DESENVOLVEDORES</h4>
               <ul>
@@ -42,7 +36,7 @@ export default function Sobrenos() {
               </ul>
             </section>
 
-            {/* CONECTE-SE CONOSCO  */}
+            {/* redes socias*/}
             <section className={styles.sociais}>
               <h2 className={styles.sociaish2}>CONECTE-SE CONOSCO</h2>
               <div className={styles.icones}>
@@ -63,7 +57,7 @@ export default function Sobrenos() {
           </div>
 
 
-          {/*Recomendações de Receitas */}
+          {/*receitas */}
           <div className={styles.recomendacoesSectionWrapper}> 
             <h3>Nossas recomendações de receitas</h3>
             <div className={styles.gridReceitas}>
