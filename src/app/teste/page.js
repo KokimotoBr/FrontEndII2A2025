@@ -56,7 +56,6 @@ export default function Sobrenos() {
             </section>
           </div>
 
-
           {/*receitas */}
           <div className={styles.recomendacoesSectionWrapper}> 
             <h3>Nossas recomendações de receitas</h3>
