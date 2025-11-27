@@ -20,10 +20,10 @@ export default function Header()  {
         </div>
 
         <nav className={styles.menu}>
-          <Link href="/testin">bolo?</Link>
+          <Link href="/testao">bolo?</Link>
           <Link href="/msgs">Mensagens</Link>
           <Link href="/localidades">Localidades</Link>
-          <Link href="/noticias-e-dicas-de-cozinha">NOTÍCIAS</Link>
+          <Link href="/">NOTÍCIAS</Link>
           <Link href="/teste">SOBRE NÓS</Link>
         </nav>
 
